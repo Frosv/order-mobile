@@ -1,7 +1,17 @@
 <template>
   <div class="tab">
-    <a href="javascript:;">首页</a>
-    <a href="javascript:;">我的</a>
+    <a href="javascript:;">
+      <i class="iconfont icon-home"></i>
+      首页
+    </a>
+    <a href="javascript:;">
+      <i class="iconfont icon-cart"></i>
+      购物车
+    </a>
+    <a href="javascript:;">
+      <i class="iconfont icon-people"></i>
+      我的
+    </a>
   </div>
 </template>
 
@@ -17,13 +27,21 @@ export default {
   background-color: rgb(228, 228, 228);
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
 }
 .tab a {
   padding: 0 1rem;
-  line-height: 2.5rem;
+  line-height: 1.8rem;
   color: #666;
+  font-size: 0.5rem;
+}
+
+.tab i{
+  display: block;
+  text-align: center;
+  height: 1.1rem;
+  font-size: 1.2rem;
 }
 </style>
