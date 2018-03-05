@@ -1,17 +1,17 @@
 <template>
   <div class="tab">
-    <a href="javascript:;">
+    <router-link to="/">
       <i class="iconfont icon-home"></i>
       首页
-    </a>
-    <a href="javascript:;">
+    </router-link>
+    <router-link to="/shop">
       <i class="iconfont icon-cart"></i>
       购物车
-    </a>
-    <a href="javascript:;">
+    </router-link>
+    <router-link to="/user">
       <i class="iconfont icon-people"></i>
       我的
-    </a>
+    </router-link>
   </div>
 </template>
 
