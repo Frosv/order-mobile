@@ -130,7 +130,7 @@ export default {
 
 .food-list{
   overflow: auto;
-  height: 29rem;
+  height: 20.5rem;
 }
 
 .food-list-box {
@@ -140,7 +140,7 @@ export default {
 
 .list-left {
   float: left;
-  width: 90%;
+  width: 86%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
