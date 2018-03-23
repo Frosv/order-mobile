@@ -29,7 +29,7 @@
         </div>
         <div class="list-right">
           <i class="iconfont icon-like"></i>
-          <i class="iconfont icon-roundaddfill"></i>
+          <i class="iconfont icon-roundaddfill" @click="a"></i>
         </div>
       </li>
       <li class="food-list-box clearfix">
@@ -107,6 +107,11 @@ export default {
   comments: {
     Swipe,
     SwipeItem
+  },
+  methods: {
+    a: function () {
+      this.$emit('add')
+    }
   }
 }
 </script>
@@ -128,7 +133,7 @@ export default {
   line-height: 7rem;
 }
 
-.food-list{
+.food-list {
   overflow: auto;
   height: 20.5rem;
 }
