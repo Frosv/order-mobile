@@ -10,13 +10,13 @@
         <div class="list-left">
           <img src="http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2015/11/201511061706277305.png" alt="" height="80" width="105">
           <div class="food-info">
-            <p>巨无霸</p>
+            <p>{{author}}</p>
             <p class="details-info">美味多汁双层巨无霸</p>
           </div>
         </div>
         <div class="list-right">
           <i class="iconfont icon-like"></i>
-          <i class="iconfont icon-roundaddfill"></i>
+          <i class="iconfont icon-roundaddfill" @click="addFood"></i>
         </div>
       </li>
       <li class="food-list-box clearfix">
@@ -29,7 +29,7 @@
         </div>
         <div class="list-right">
           <i class="iconfont icon-like"></i>
-          <i class="iconfont icon-roundaddfill" @click="a"></i>
+          <i class="iconfont icon-roundaddfill" @click="addFood"></i>
         </div>
       </li>
       <li class="food-list-box clearfix">
@@ -109,8 +109,14 @@ export default {
     SwipeItem
   },
   methods: {
-    a: function () {
-      this.$emit('add')
+    addFood: function () {
+      console.log(event.currentTarget)
+      this.$store.commit('addFood')
+    }
+  },
+  computed: {
+    author() {
+      return this.$store.state.author
     }
   }
 }
