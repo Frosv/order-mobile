@@ -15,6 +15,24 @@ export default {
   components: {
     titleTop,
     navBottom
+  },
+  mounted() {
+    this.init()
+  },
+  methods: {
+    init: async function () {
+      console.log('async start')
+      await this.$axios.get('https://www.easy-mock.com/mock/5a09a4297b68855a07f77288/example/async')
+        .then(response => {
+          console.log(response)
+        })
+      await this.$axios.get('https://www.easy-mock.com/mock/5a09a4297b68855a07f77288/example/mock')
+        .then(response => {
+          console.log(response.data)
+        })
+
+      console.log('async end')
+    }
   }
 }
 </script>
